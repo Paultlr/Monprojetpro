@@ -1,0 +1,2196 @@
+mon-site/
+│
+├── index.html
+│
+└── assets/
+    ├── presentation-manager.png
+    ├── strategic-progress.mp3
+    └── podcast-feuille-de-route.m4a
+    <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manager en Gestion de Projet</title>
+
+    <meta name="description"
+          content="Découvrez le métier de manager en gestion de projet, ses missions, ses compétences, ses formations et ses perspectives de carrière.">
+
+    <style>
+
+        /* =====================================================
+           VARIABLES
+        ===================================================== */
+
+        :root {
+            --bleu-fonce: #061d38;
+            --bleu: #0879d1;
+            --bleu-clair: #eaf6ff;
+            --orange: #ff9418;
+            --blanc: #ffffff;
+            --gris: #f4f7fa;
+            --gris-texte: #607086;
+            --texte: #14243b;
+
+            --ombre:
+                0 15px 40px rgba(6, 29, 56, 0.12);
+
+            --rayon: 20px;
+        }
+
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                "Segoe UI",
+                Arial,
+                sans-serif;
+
+            background: var(--gris);
+            color: var(--texte);
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background:
+                rgba(6, 29, 56, 0.97);
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .navbar {
+            max-width: 1250px;
+            margin: auto;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 16px 25px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #19a1ff;
+        }
+
+        nav {
+            display: flex;
+            gap: 8px;
+        }
+
+        nav a {
+            color: white;
+
+            padding: 9px 14px;
+
+            border-radius: 9px;
+
+            font-weight: 700;
+
+            transition: 0.25s;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.12);
+            color: #46b4ff;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            max-width: 1250px;
+            margin: auto;
+
+            min-height: 700px;
+
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+
+            gap: 45px;
+
+            align-items: center;
+
+            padding: 70px 25px;
+        }
+
+        .hero-text .small-title {
+            color: var(--bleu);
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 5vw, 5.4rem);
+            line-height: 0.95;
+
+            color: var(--bleu-fonce);
+
+            margin: 15px 0 25px;
+
+            letter-spacing: -3px;
+        }
+
+        .hero h1 span {
+            color: var(--bleu);
+        }
+
+        .hero h2 {
+            font-size: 1.35rem;
+            color: var(--bleu-fonce);
+
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: var(--gris-texte);
+
+            font-size: 1.08rem;
+
+            max-width: 600px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+
+            margin-top: 30px;
+        }
+
+        .button {
+            padding: 13px 20px;
+
+            border-radius: 12px;
+
+            font-weight: 800;
+
+            transition: 0.25s;
+        }
+
+        .button-primary {
+            background: var(--bleu);
+            color: white;
+        }
+
+        .button-primary:hover {
+            background: #0565ad;
+            transform: translateY(-2px);
+        }
+
+        .button-secondary {
+            background: white;
+            border: 1px solid #d7e2ed;
+
+            color: var(--bleu-fonce);
+        }
+
+        .button-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--ombre);
+        }
+
+
+        /* =====================================================
+           PHOTO DE PRESENTATION
+        ===================================================== */
+
+        .hero-photo {
+            position: relative;
+        }
+
+        .hero-photo img {
+            width: 100%;
+
+            border-radius: 30px;
+
+            box-shadow:
+                0 25px 60px rgba(6,29,56,0.22);
+
+            transition: 0.35s;
+        }
+
+        .hero-photo img:hover {
+            transform: scale(1.015);
+        }
+
+        .photo-label {
+            position: absolute;
+
+            bottom: 20px;
+            left: 20px;
+
+            background: var(--bleu-fonce);
+
+            color: white;
+
+            padding: 13px 18px;
+
+            border-radius: 12px;
+
+            font-weight: 800;
+
+            box-shadow:
+                0 10px 25px rgba(0,0,0,0.25);
+        }
+
+
+        /* =====================================================
+           SECTIONS
+        ===================================================== */
+
+        section {
+            padding: 80px 25px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-header small {
+            color: var(--bleu);
+            text-transform: uppercase;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        .section-header h2 {
+            color: var(--bleu-fonce);
+
+            font-size:
+                clamp(2rem, 4vw, 3rem);
+
+            margin: 8px 0 12px;
+        }
+
+        .section-header p {
+            color: var(--gris-texte);
+            max-width: 750px;
+            margin: auto;
+        }
+
+
+        /* =====================================================
+           MISSIONS
+        ===================================================== */
+
+        .missions {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+
+            border-radius: var(--rayon);
+
+            padding: 28px;
+
+            box-shadow: var(--ombre);
+
+            border: 1px solid #e6edf4;
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-icon {
+            width: 52px;
+            height: 52px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 15px;
+
+            background: var(--bleu-clair);
+
+            font-size: 1.4rem;
+        }
+
+        .card h3 {
+            color: var(--bleu-fonce);
+
+            margin:
+                17px 0 8px;
+        }
+
+        .card p {
+            color: var(--gris-texte);
+        }
+
+
+        /* =====================================================
+           COMPETENCES
+        ===================================================== */
+
+        #competences {
+            background: var(--bleu-fonce);
+            color: white;
+        }
+
+        #competences .section-header h2 {
+            color: white;
+        }
+
+        #competences .section-header p {
+            color: #d9e6f3;
+        }
+
+        .skills {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+        .skill {
+            background:
+                linear-gradient(
+                    145deg,
+                    #0d345d,
+                    #061d38
+                );
+
+            border:
+                1px solid
+                rgba(255,255,255,0.12);
+
+            border-radius: 22px;
+
+            padding: 30px;
+
+            min-height: 320px;
+        }
+
+        .skill-number {
+            width: 42px;
+            height: 42px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: var(--orange);
+
+            color: white;
+
+            font-weight: 900;
+        }
+
+        .skill h3 {
+            color: white;
+
+            font-size: 1.3rem;
+
+            margin:
+                20px 0 12px;
+        }
+
+        .skill p {
+            color: #d9e6f3;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 7px;
+
+            margin-top: 20px;
+        }
+
+        .tag {
+            border:
+                1px solid
+                rgba(19,160,255,0.4);
+
+            background:
+                rgba(19,160,255,0.12);
+
+            color: #8ed4ff;
+
+            border-radius: 50px;
+
+            padding: 5px 10px;
+
+            font-size: 0.78rem;
+
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           PRESENTATION 3 COMPETENCES
+        ===================================================== */
+
+        .presentation {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 30px;
+        }
+
+        .slides-container {
+            background: white;
+
+            border-radius: 25px;
+
+            box-shadow: var(--ombre);
+
+            overflow: hidden;
+        }
+
+        .slide {
+            display: none;
+
+            min-height: 390px;
+
+            padding: 40px;
+
+            justify-content: center;
+
+            flex-direction: column;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        .slide-number {
+            color: var(--bleu);
+
+            text-transform: uppercase;
+
+            font-weight: 900;
+
+            letter-spacing: 2px;
+        }
+
+        .slide h3 {
+            font-size: 2rem;
+
+            color: var(--bleu-fonce);
+
+            margin: 15px 0;
+        }
+
+        .slide p {
+            color: var(--gris-texte);
+
+            margin-bottom: 20px;
+        }
+
+        .slide strong {
+            color: var(--bleu-fonce);
+        }
+
+        .slide-navigation {
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            align-items: center;
+
+            padding: 15px 20px;
+
+            background: #f7faff;
+
+            border-top:
+                1px solid #e5edf5;
+        }
+
+        .slide-button {
+            border: none;
+
+            background: var(--bleu-fonce);
+
+            color: white;
+
+            border-radius: 9px;
+
+            padding: 9px 14px;
+
+            cursor: pointer;
+
+            font-weight: 800;
+        }
+
+        .dots {
+            display: flex;
+            gap: 7px;
+        }
+
+        .dot {
+            width: 9px;
+            height: 9px;
+
+            border-radius: 50%;
+
+            background: #c8d5e3;
+        }
+
+        .dot.active {
+            background: var(--bleu);
+        }
+
+
+        /* =====================================================
+           MUSIQUE
+        ===================================================== */
+
+        .music-box {
+            background: var(--bleu-fonce);
+
+            color: white;
+
+            border-radius: 25px;
+
+            padding: 35px;
+
+            box-shadow: var(--ombre);
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+        }
+
+        .music-box h3 {
+            font-size: 1.8rem;
+
+            margin-bottom: 12px;
+        }
+
+        .music-box p {
+            color: #d7e5f3;
+
+            margin-bottom: 20px;
+        }
+
+        audio {
+            width: 100%;
+            margin: 10px 0 20px;
+        }
+
+        .pdf-button {
+            display: inline-block;
+
+            width: fit-content;
+
+            background: white;
+
+            color: var(--bleu-fonce);
+
+            padding: 11px 15px;
+
+            border-radius: 10px;
+
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           FORMATIONS
+        ===================================================== */
+
+        .formation-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .formation-date {
+            color: var(--bleu);
+
+            font-size: 0.85rem;
+
+            font-weight: 900;
+
+            text-transform: uppercase;
+        }
+
+        .formation h3 {
+            color: var(--bleu-fonce);
+
+            margin: 8px 0;
+        }
+
+        .certifications {
+            margin-top: 25px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 15px;
+        }
+
+        .certification {
+            background: white;
+
+            border-radius: 15px;
+
+            padding: 18px;
+
+            text-align: center;
+
+            box-shadow:
+                0 8px 20px
+                rgba(6,29,56,.08);
+
+            font-weight: 800;
+
+            color: var(--bleu-fonce);
+        }
+
+
+        /* =====================================================
+           CARRIERE
+        ===================================================== */
+
+        .career {
+            background: white;
+        }
+
+        .career-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(5, 1fr);
+
+            gap: 15px;
+        }
+
+        .career-card {
+            position: relative;
+
+            text-align: center;
+
+            padding: 25px 15px;
+
+            border-radius: 18px;
+
+            background: var(--gris);
+        }
+
+        .career-card:not(:last-child)::after {
+            content: "→";
+
+            position: absolute;
+
+            right: -15px;
+
+            top: 50%;
+
+            color: var(--bleu);
+
+            font-size: 1.4rem;
+
+            font-weight: 900;
+        }
+
+        .career-card h3 {
+            font-size: 1rem;
+
+            color: var(--bleu-fonce);
+        }
+
+
+        /* =====================================================
+           FAQ
+        ===================================================== */
+
+        .faq-grid {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 15px;
+        }
+
+        details {
+            background: white;
+
+            padding: 18px 20px;
+
+            border-radius: 15px;
+
+            margin-bottom: 12px;
+
+            box-shadow:
+                0 8px 20px
+                rgba(6,29,56,.07);
+        }
+
+        summary {
+            cursor: pointer;
+
+            font-weight: 800;
+
+            color: var(--bleu-fonce);
+        }
+
+        details p {
+            color: var(--gris-texte);
+
+            margin-top: 12px;
+        }
+
+
+        /* =====================================================
+           PODCAST
+        ===================================================== */
+
+        #podcast {
+            background:
+                linear-gradient(
+                    135deg,
+                    #e9f6ff,
+                    #ffffff
+                );
+        }
+
+        .podcast-box {
+            max-width: 900px;
+
+            margin: auto;
+
+            background: white;
+
+            border-radius: 28px;
+
+            padding: 45px;
+
+            text-align: center;
+
+            box-shadow: var(--ombre);
+        }
+
+        .podcast-icon {
+            font-size: 3rem;
+
+            margin-bottom: 10px;
+        }
+
+        .podcast-box h2 {
+            color: var(--bleu-fonce);
+
+            font-size:
+                clamp(2rem,4vw,3rem);
+
+            margin-bottom: 15px;
+        }
+
+        .podcast-box p {
+            color: var(--gris-texte);
+
+            max-width: 700px;
+
+            margin: auto auto 25px;
+        }
+
+
+        /* =====================================================
+           CONTACT
+        ===================================================== */
+
+        .contact-grid {
+            display: grid;
+
+            grid-template-columns:
+                0.8fr 1.2fr;
+
+            gap: 25px;
+        }
+
+        .contact-info,
+        .contact-form {
+            background: white;
+
+            border-radius: 22px;
+
+            padding: 30px;
+
+            box-shadow: var(--ombre);
+        }
+
+        .contact-info h3 {
+            color: var(--bleu-fonce);
+
+            margin-bottom: 12px;
+        }
+
+        .contact-info p {
+            color: var(--gris-texte);
+        }
+
+        form {
+            display: grid;
+
+            gap: 13px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+
+            padding: 13px 15px;
+
+            border:
+                1px solid #d8e2ec;
+
+            border-radius: 10px;
+
+            font: inherit;
+        }
+
+        textarea {
+            min-height: 140px;
+
+            resize: vertical;
+        }
+
+        button[type="submit"] {
+            border: none;
+
+            cursor: pointer;
+
+            font: inherit;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            background: var(--bleu-fonce);
+
+            color: #dce8f4;
+
+            text-align: center;
+
+            padding: 35px 20px;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media(max-width: 950px) {
+
+            .hero,
+            .presentation,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .missions,
+            .skills,
+            .formation-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .career-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .career-card:not(:last-child)::after {
+                display: none;
+            }
+
+            .certifications {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+        }
+
+
+        @media(max-width: 650px) {
+
+            nav {
+                display: none;
+            }
+
+            .hero {
+                padding-top: 45px;
+            }
+
+            .missions,
+            .skills,
+            .formation-grid,
+            .faq-grid,
+            .career-grid,
+            .certifications {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 60px 16px;
+            }
+
+            .hero {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .slide {
+                padding: 30px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- ==========================================================
+     MENU
+=========================================================== -->
+
+<header>
+
+    <div class="navbar">
+
+        <a href="#accueil" class="logo">
+            MANAGER <span>PROJET</span>
+        </a>
+
+        <nav>
+
+            <a href="#metier">
+                Le métier
+            </a>
+
+            <a href="#competences">
+                Compétences
+            </a>
+
+            <a href="#formations">
+                Formations
+            </a>
+
+            <a href="#faq">
+                FAQ
+            </a>
+
+            <a href="#contacts">
+                Contacts
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- ==========================================================
+     ACCUEIL
+=========================================================== -->
+
+<section class="hero" id="accueil">
+
+    <div class="hero-text">
+
+        <div class="small-title">
+            Découvrez un métier stratégique
+        </div>
+
+        <h1>
+            MANAGER EN
+            <br>
+            <span>GESTION DE PROJET</span>
+        </h1>
+
+        <h2>
+            Piloter les projets. Fédérer les équipes.
+            Créer de la valeur.
+        </h2>
+
+        <p>
+            Le manager en gestion de projet planifie, organise
+            et supervise les projets de l'initiation à la clôture.
+            Il veille au respect des délais, du budget et de la
+            qualité, tout en fédérant les parties prenantes autour
+            d'objectifs communs.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#competences"
+               class="button button-primary">
+                Découvrir les 3 compétences clés
+            </a>
+
+            <a href="#podcast"
+               class="button button-secondary">
+                🎙️ Écouter le podcast
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- PHOTO DE PRESENTATION -->
+
+    <div class="hero-photo">
+
+        <img
+            src="assets/presentation-manager.png"
+            alt="Manager en gestion de projet">
+
+        <div class="photo-label">
+            🎯 Piloter · 🤝 Fédérer · 📈 Performer
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     METIER
+=========================================================== -->
+
+<section id="metier">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <small>
+                Le métier
+            </small>
+
+            <h2>
+                Au cœur de la réussite des projets
+            </h2>
+
+            <p>
+                Le manager en gestion de projet transforme un
+                objectif en résultats concrets en coordonnant
+                les équipes, les ressources et les parties
+                prenantes.
+            </p>
+
+        </div>
+
+
+        <div class="missions">
+
+            <article class="card">
+
+                <div class="card-icon">
+                    🎯
+                </div>
+
+                <h3>
+                    Définir
+                </h3>
+
+                <p>
+                    Définir les objectifs, le périmètre et
+                    les livrables du projet.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <div class="card-icon">
+                    📅
+                </div>
+
+                <h3>
+                    Planifier
+                </h3>
+
+                <p>
+                    Organiser les tâches, les ressources,
+                    les délais et le budget.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <div class="card-icon">
+                    👥
+                </div>
+
+                <h3>
+                    Fédérer
+                </h3>
+
+                <p>
+                    Coordonner les acteurs et créer une
+                    dynamique collective.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <div class="card-icon">
+                    📊
+                </div>
+
+                <h3>
+                    Piloter
+                </h3>
+
+                <p>
+                    Suivre l'avancement, les risques,
+                    les coûts et la qualité.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <div class="card-icon">
+                    💬
+                </div>
+
+                <h3>
+                    Communiquer
+                </h3>
+
+                <p>
+                    Écouter, informer, reformuler et
+                    adapter son discours.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <div class="card-icon">
+                    🚩
+                </div>
+
+                <h3>
+                    Capitaliser
+                </h3>
+
+                <p>
+                    Clôturer le projet et tirer les
+                    enseignements de l'expérience.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     3 COMPETENCES
+=========================================================== -->
+
+<section id="competences">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <small>
+                Les compétences
+            </small>
+
+            <h2>
+                3 compétences clés à développer
+            </h2>
+
+            <p>
+                Trois axes particulièrement importants pour
+                construire une posture solide de manager en
+                gestion de projet.
+            </p>
+
+        </div>
+
+
+        <div class="skills">
+
+
+            <!-- COMPETENCE 1 -->
+
+            <article class="skill">
+
+                <div class="skill-number">
+                    1
+                </div>
+
+                <h3>
+                    Méthodes & outils
+                    de planification
+                </h3>
+
+                <p>
+                    Maîtriser les méthodes de gestion de projet
+                    et les outils permettant de structurer,
+                    planifier et suivre efficacement un projet.
+                </p>
+
+                <div class="tags">
+
+                    <span class="tag">PMBOK</span>
+                    <span class="tag">PRINCE2</span>
+                    <span class="tag">Agile</span>
+                    <span class="tag">Scrum</span>
+                    <span class="tag">Kanban</span>
+                    <span class="tag">Gantt</span>
+                    <span class="tag">Excel</span>
+                    <span class="tag">Jira</span>
+
+                </div>
+
+            </article>
+
+
+            <!-- COMPETENCE 2 -->
+
+            <article class="skill">
+
+                <div class="skill-number">
+                    2
+                </div>
+
+                <h3>
+                    Communication &
+                    écoute active
+                </h3>
+
+                <p>
+                    Comprendre les besoins, communiquer clairement,
+                    animer les réunions et adapter son discours
+                    aux différentes parties prenantes.
+                </p>
+
+                <div class="tags">
+
+                    <span class="tag">Écoute</span>
+                    <span class="tag">Communication</span>
+                    <span class="tag">Réunions</span>
+                    <span class="tag">Reporting</span>
+                    <span class="tag">Feedback</span>
+                    <span class="tag">Négociation</span>
+
+                </div>
+
+            </article>
+
+
+            <!-- COMPETENCE 3 -->
+
+            <article class="skill">
+
+                <div class="skill-number">
+                    3
+                </div>
+
+                <h3>
+                    Leadership &
+                    esprit d'équipe
+                </h3>
+
+                <p>
+                    Fédérer, motiver et faire avancer une équipe,
+                    notamment lorsque le manager ne dispose pas
+                    d'une autorité hiérarchique directe.
+                </p>
+
+                <div class="tags">
+
+                    <span class="tag">Leadership</span>
+                    <span class="tag">Motivation</span>
+                    <span class="tag">Coopération</span>
+                    <span class="tag">Diplomatie</span>
+                    <span class="tag">Confiance</span>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     PRESENTATION + MUSIQUE
+=========================================================== -->
+
+<section id="presentation">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <small>
+                Présentation
+            </small>
+
+            <h2>
+                Les 3 compétences essentielles
+            </h2>
+
+            <p>
+                Une présentation interactive inspirée du
+                document consacré aux compétences et soft skills
+                du manager en gestion de projet.
+            </p>
+
+        </div>
+
+
+        <div class="presentation">
+
+
+            <!-- SLIDES -->
+
+            <div class="slides-container">
+
+
+                <div class="slide active">
+
+                    <div class="slide-number">
+                        Compétence 1
+                    </div>
+
+                    <h3>
+                        Méthodes & outils
+                        de planification
+                    </h3>
+
+                    <p>
+                        Le manager doit connaître le cycle de vie
+                        d'un projet et maîtriser des méthodes telles
+                        que PMBOK, PRINCE2 ou Agile.
+                    </p>
+
+                    <strong>
+                        Outils : Gantt, Excel, Jira,
+                        Trello, Kanban...
+                    </strong>
+
+                </div>
+
+
+                <div class="slide">
+
+                    <div class="slide-number">
+                        Compétence 2
+                    </div>
+
+                    <h3>
+                        Communication &
+                        écoute active
+                    </h3>
+
+                    <p>
+                        La communication permet de comprendre les
+                        besoins, de partager les enjeux et de créer
+                        une relation efficace avec les équipes et
+                        les parties prenantes.
+                    </p>
+
+                    <strong>
+                        À développer : écoute,
+                        prise de parole, réunions,
+                        reporting et négociation.
+                    </strong>
+
+                </div>
+
+
+                <div class="slide">
+
+                    <div class="slide-number">
+                        Compétence 3
+                    </div>
+
+                    <h3>
+                        Leadership &
+                        esprit d'équipe
+                    </h3>
+
+                    <p>
+                        Le manager doit être capable de fédérer,
+                        motiver et accompagner une équipe,
+                        parfois sans autorité hiérarchique directe.
+                    </p>
+
+                    <strong>
+                        À développer : motivation,
+                        coopération, diplomatie et confiance.
+                    </strong>
+
+                </div>
+
+
+                <div class="slide-navigation">
+
+                    <button
+                        class="slide-button"
+                        onclick="previousSlide()">
+                        ←
+                    </button>
+
+                    <div class="dots">
+
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+
+                    </div>
+
+                    <button
+                        class="slide-button"
+                        onclick="nextSlide()">
+                        →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- MUSIQUE -->
+
+            <div class="music-box">
+
+                <h3>
+                    🎵 Strategic Progress
+                </h3>
+
+                <p>
+                    Lance la musique que tu as fournie pour
+                    accompagner la présentation des trois
+                    compétences clés.
+                </p>
+
+                <audio controls>
+
+                    <source
+                        src="assets/strategic-progress.mp3"
+                        type="audio/mpeg">
+
+                    Votre navigateur ne prend pas
+                    en charge la lecture audio.
+
+                </audio>
+
+
+                <a
+                    href="assets/competences-soft-skills.pdf"
+                    target="_blank"
+                    class="pdf-button">
+
+                    📄 Consulter le PDF
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     FORMATIONS
+=========================================================== -->
+
+<section id="formations">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <small>
+                Formations
+            </small>
+
+            <h2>
+                Construire son parcours
+            </h2>
+
+            <p>
+                Une progression en trois étapes pour passer
+                progressivement d'étudiant à professionnel de
+                la gestion de projet.
+            </p>
+
+        </div>
+
+
+        <div class="formation-grid">
+
+
+            <article class="card formation">
+
+                <div class="formation-date">
+                    0 – 6 mois
+                </div>
+
+                <h3>
+                    Poser les bases
+                </h3>
+
+                <p>
+                    Découvrir les fondamentaux de la gestion de
+                    projet, PMBOK, PRINCE2, Agile, Excel et les
+                    outils de planification.
+                </p>
+
+            </article>
+
+
+            <article class="card formation">
+
+                <div class="formation-date">
+                    6 – 12 mois
+                </div>
+
+                <h3>
+                    Pratiquer & certifier
+                </h3>
+
+                <p>
+                    Développer son expérience grâce à des projets,
+                    stages ou alternances et envisager une première
+                    certification comme PSM I ou CAPM.
+                </p>
+
+            </article>
+
+
+            <article class="card formation">
+
+                <div class="formation-date">
+                    12 – 18 mois
+                </div>
+
+                <h3>
+                    Se professionnaliser
+                </h3>
+
+                <p>
+                    Consolider son expérience, développer son
+                    leadership, préparer ses entretiens et
+                    valoriser ses réalisations.
+                </p>
+
+            </article>
+
+        </div>
+
+
+        <div class="certifications">
+
+            <div class="certification">
+                CAPM
+            </div>
+
+            <div class="certification">
+                PSM I
+            </div>
+
+            <div class="certification">
+                PRINCE2
+            </div>
+
+            <div class="certification">
+                PMP
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     CARRIERE
+=========================================================== -->
+
+<section class="career">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <small>
+                Évolution
+            </small>
+
+            <h2>
+                Une carrière pleine d'opportunités
+            </h2>
+
+            <p>
+                La gestion de projet permet d'évoluer
+                progressivement vers des responsabilités
+                stratégiques.
+            </p>
+
+        </div>
+
+
+        <div class="career-grid">
+
+            <div class="career-card">
+
+                <h3>
+                    Chef de projet junior
+                </h3>
+
+            </div>
+
+
+            <div class="career-card">
+
+                <h3>
+                    Chef de projet confirmé
+                </h3>
+
+            </div>
+
+
+            <div class="career-card">
+
+                <h3>
+                    Chef de projet senior
+                </h3>
+
+            </div>
+
+
+            <div class="career-card">
+
+                <h3>
+                    Responsable de programmes
+                </h3>
+
+            </div>
+
+
+            <div class="career-card">
+
+                <h3>
+                    Directeur de projet / PMO
+                </h3>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     FAQ
+=========================================================== -->
+
+<section id="faq">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <small>
+                FAQ
+            </small>
+
+            <h2>
+                Les questions essentielles
+            </h2>
+
+        </div>
+
+
+        <div class="faq-grid">
+
+
+            <div>
+
+                <details>
+
+                    <summary>
+                        Que fait un manager en gestion de projet ?
+                    </summary>
+
+                    <p>
+                        Il définit les objectifs, planifie les
+                        ressources et les délais, coordonne les
+                        acteurs, suit les risques et la performance,
+                        communique avec les parties prenantes et
+                        clôture le projet.
+                    </p>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        Doit-il avoir une autorité hiérarchique ?
+                    </summary>
+
+                    <p>
+                        Pas nécessairement. Le manager de projet
+                        doit souvent fédérer des personnes sans
+                        exercer d'autorité hiérarchique directe.
+                    </p>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        Quelles sont les compétences prioritaires ?
+                    </summary>
+
+                    <p>
+                        Les trois axes présentés sur ce site sont
+                        les méthodes et outils de planification,
+                        la communication et l'écoute active,
+                        ainsi que le leadership et l'esprit d'équipe.
+                    </p>
+
+                </details>
+
+            </div>
+
+
+            <div>
+
+                <details>
+
+                    <summary>
+                        Quelles certifications envisager ?
+                    </summary>
+
+                    <p>
+                        Selon son niveau et son projet professionnel,
+                        un candidat peut notamment envisager CAPM,
+                        PSM I, PRINCE2 ou, avec l'expérience requise,
+                        PMP.
+                    </p>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        Peut-on commencer pendant ses études ?
+                    </summary>
+
+                    <p>
+                        Oui. Les projets universitaires, associatifs,
+                        personnels, les stages et les alternances
+                        permettent de développer des compétences
+                        concrètes.
+                    </p>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        Pourquoi l'anglais est-il important ?
+                    </summary>
+
+                    <p>
+                        L'anglais professionnel est particulièrement
+                        utile dans les environnements internationaux
+                        et dans de nombreuses entreprises du numérique.
+                    </p>
+
+                </details>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     PODCAST
+=========================================================== -->
+
+<section id="podcast">
+
+    <div class="container">
+
+        <div class="podcast-box">
+
+            <div class="podcast-icon">
+                🎙️
+            </div>
+
+            <div class="section-header">
+
+                <small>
+                    Podcast
+                </small>
+
+            </div>
+
+            <h2>
+                Le métier de vos rêves est
+                à portée de main !
+            </h2>
+
+            <p>
+                Écoutez le podcast consacré à la feuille de route
+                du manager sans autorité et découvrez comment
+                développer progressivement votre posture de
+                manager en gestion de projet.
+            </p>
+
+
+            <audio controls>
+
+                <source
+                    src="assets/podcast-feuille-de-route.m4a"
+                    type="audio/mp4">
+
+                Votre navigateur ne prend pas
+                en charge la lecture audio.
+
+            </audio>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     CONTACTS
+=========================================================== -->
+
+<section id="contacts">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <small>
+                Contacts
+            </small>
+
+            <h2>
+                Échangeons autour du projet
+            </h2>
+
+            <p>
+                Une question sur le métier, les formations ou
+                les compétences à développer ?
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-info">
+
+                <h3>
+                    Construisez votre avenir
+                </h3>
+
+                <p>
+                    La gestion de projet est un domaine transversal
+                    qui combine organisation, communication,
+                    leadership et capacité d'analyse.
+                </p>
+
+                <br>
+
+                <p>
+                    📍 France
+                </p>
+
+                <p>
+                    🎯 Gestion de projet
+                </p>
+
+                <p>
+                    🚀 Management & innovation
+                </p>
+
+            </div>
+
+
+            <div class="contact-form">
+
+                <form
+                    onsubmit="
+                    event.preventDefault();
+                    alert('Merci pour votre message !');
+                    ">
+
+                    <input
+                        type="text"
+                        placeholder="Votre nom"
+                        required>
+
+                    <input
+                        type="email"
+                        placeholder="Votre adresse e-mail"
+                        required>
+
+                    <input
+                        type="text"
+                        placeholder="Objet">
+
+                    <textarea
+                        placeholder="Votre message"
+                        required>
+                    </textarea>
+
+                    <button
+                        type="submit"
+                        class="button button-primary">
+
+                        Envoyer le message
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- ==========================================================
+     FOOTER
+=========================================================== -->
+
+<footer>
+
+    <strong>
+        MANAGER PROJET
+    </strong>
+
+    <br>
+
+    Piloter les projets · Fédérer les équipes · Créer de la valeur
+
+</footer>
+
+
+
+<!-- ==========================================================
+     JAVASCRIPT - PRESENTATION
+=========================================================== -->
+
+<script>
+
+    let currentSlide = 0;
+
+    const slides =
+        document.querySelectorAll(".slide");
+
+    const dots =
+        document.querySelectorAll(".dot");
+
+
+    function showSlide(number) {
+
+        currentSlide =
+            (number + slides.length)
+            % slides.length;
+
+
+        slides.forEach(
+            (slide, index) => {
+
+                slide.classList.toggle(
+                    "active",
+                    index === currentSlide
+                );
+
+            }
+        );
+
+
+        dots.forEach(
+            (dot, index) => {
+
+                dot.classList.toggle(
+                    "active",
+                    index === currentSlide
+                );
+
+            }
+        );
+
+    }
+
+
+    function nextSlide() {
+
+        showSlide(currentSlide + 1);
+
+    }
+
+
+    function previousSlide() {
+
+        showSlide(currentSlide - 1);
+
+    }
+
+
+    /*
+       Passage automatique
+       toutes les 8 secondes.
+    */
+
+    setInterval(
+        () => {
+
+            nextSlide();
+
+        },
+        8000
+    );
+
+</script>
+
+
+</body>
+</html>
